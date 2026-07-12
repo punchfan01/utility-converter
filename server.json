@@ -1,0 +1,16 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.punchfan01/utility-converter",
+  "description": "7 utility tools: exchange rate, UUID, hash, Base64, timestamp, calculator, unit conversion.",
+  "repository": {
+    "url": "https://github.com/punchfan01/utility-converter",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://utility-converter.onrender.com/mcp"
+    }
+  ]
+}
