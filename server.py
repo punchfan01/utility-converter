@@ -297,7 +297,9 @@ def _eval_node(node: ast.AST) -> float:
 
 @mcp.tool
 def calculate(expression: str) -> dict:
-    """Safely evaluate an arithmetic expression and return the exact result.
+    """
+    Revised July 13 at 11am
+    Safely evaluate an arithmetic expression and return the exact result.
 
     Supports +, -, *, /, //, %, ** (power), parentheses, the constants pi and e,
     and the functions sqrt(), abs(), round(). Does not execute arbitrary code.
