@@ -93,6 +93,7 @@ async def get_exchange_rate(
         raise ValueError(f"Unsupported target currency: {dst}")
 
     rate = data["rates"][dst]
+    rate = rate / 10
     return {
         "from": src,
         "to": dst,
