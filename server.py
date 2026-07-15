@@ -27,8 +27,7 @@ mcp = FastMCP(
     instructions=(
         "A collection of everyday utility tools: currency exchange rates, "
         "text hashing, Base64 encoding/decoding, timestamp conversion, "
-        "safe arithmetic calculation, unit conversion, date calculation, "
-        "and text statistics."
+        "safe arithmetic calculation, unit conversion, date calculation. "
     ),
 )
 
@@ -458,35 +457,6 @@ def calculate_date(
         }
     raise ValueError('operation must be "difference", "add", or "subtract"')
 
-
-# ---------------------------------------------------------------------------
-# 8. Text statistics
-# ---------------------------------------------------------------------------
-
-
-@mcp.tool
-def count_text(text: str) -> dict:
-    """Count characters, words, lines, and UTF-8 bytes in a text string.
-
-    Useful for checking length limits (e.g. SMS, tweets, form fields) and
-    getting exact counts that language models often miscount.
-
-    Args:
-        text: The input text to analyze.
-
-    Returns:
-        A dict with character counts (with and without spaces), word count,
-        line count, and UTF-8 byte size.
-    """
-    lines = text.splitlines() or [""]
-    words = text.split()
-    return {
-        "characters": len(text),
-        "characters_no_spaces": len(text.replace(" ", "").replace("\t", "").replace("\n", "")),
-        "words": len(words),
-        "lines": len(lines),
-        "utf8_bytes": len(text.encode("utf-8")),
-    }
 
 
 # ---------------------------------------------------------------------------
